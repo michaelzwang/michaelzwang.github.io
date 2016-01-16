@@ -18,14 +18,14 @@ body {
 
 li {
 	display: inline;
-	margin: 0px 3px;
+	margin: 0px;
 }
 
 a.nav {
 	color: #000000;
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 5px 50px 5px 50px;
+	padding: 5px 30px 5px 30px;
 }
 
 a.nav:hover, a.nav.on {
