@@ -14,7 +14,7 @@ p {
 	margin: 10px auto 10px auto;
 }
 
-img {
+img.margin {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
