@@ -21,6 +21,7 @@ li {
 	margin: 0px;
 }
 
+
 a.nav {
 	color: #000000;
 	text-transform: uppercase;
@@ -29,6 +30,11 @@ a.nav {
 }
 
 a.nav:hover, a.nav.on {
+	color:#3f434a;
+	background-color: #ffffff;
+}
+
+a.primary {
 	color:#3f434a;
 	background-color: #ffffff;
 }
