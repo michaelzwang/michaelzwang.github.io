@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="../stylesheets/default.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+  <title>Michael Wang</title>
+  <meta charset="UTF-8">
+
+</head>
+
+<body>
+<header>
+      <h1><span>Blog</span> Posts</h1>
+
+      <ul id="navigation">
+        <li><a href="../index.html" class="nav">Home</a></li>
+        <li><a href="../about.html" class="nav">About</a></li>
+        <li><a href="../projects.html" class="nav">Projects</a></li>
+        <li><a href="./index.html" class="nav">Blog</a></li>
+      </ul>
+</header>
+
+<main>
+  <h2>Ruby Arrays & Hashes</h2>
+  <h4>January 21, 2016</h4>
+
+  <section>
+    <p>This week, I started diving into the programming language of Ruby and one of the more important concepts that I've learned about is the difference between arrays and hashes.</p>
+    <p>I'll start with <code>arrays.</code> Ruby arrays are basically a list of items grouped together; an array is a collection of data.</p> 
+    <p>One important aspect of arrays to remember is that an array is a <code>number-indexed</code> list. This means that the first item in the array has an index of 0, the second item has an index of 1, the second item has an index of 2, and so on and so forth. Ultimately, the last item in the array will have an index equal to the number of items in the array minus one, which can also be expressed as <code>(array.length - 1)</code>.</p>
+    <p>Additionally, arrays in Ruby can be empty or can contain any type of information inlcuding strings, numbers, and even other arrays. Here is an example of an array:</p> 
+    <pre>
+      cities = ["San Francisco", "San Diego", "Chicago"]
+      cities[0] # => "San Francisco"
+      cities[2] # => "Chicago"
+    </pre>
+    <p>The array is called <code>cities</code> and it is comprised of four different string elements separated by commas(,) within brackets([]). When you call a certain index on the array, you get the element at the corresponding index returned to you as shown by <code>cities[0]</code> which returned <code>"San Francisco"</code> because it is at the position of index 0.</p>
+    <p>You can also add new elements to the array:</p>
+    <pre>
+      cities &lt&lt "New York"
+      cities[3] # => "New York"
+                # "New York" was added to the end of the cities array
+    </pre>
+    <br>
+    <p>A <code>hash</code> is also a collection of data, but each element of data is organized by name. A hash is unordered, so instead of assigning elements an index, the data is organized into <code>key/value pairs</code>. I like to think of hashes as a mini dictionary-like list.</p>
+    <pre>
+      pets = {
+        "cats" => 2,
+        "dogs" => 1,
+        "fish" => 4,
+        "rabbits" => 3
+      }
+
+      pets["dogs"]      # => 1
+      pets["rabbits"]   # => 3
+    </pre>
+    <p>The <code>keys</code> are on the left and are in quotation marks while the <code>values</code> are on the right-side of the rocket(=>) symbol.</p>
+    <p>You can also easily add a new key and value to the hash, or modify and existing key's corresponding value:</p>
+    <pre>
+      pets["birds"] = 2       # this is a new key/value pair
+      pets["rabbits"] = 5     # the rabbits key already exists
+    </pre>
+    <p>So now the new hash looks like:</p>
+    <pre>
+      pets = {
+        "cats" => 2,
+        "dogs" => 1,
+        "fish" => 4,
+        "rabbits" => 5,       # the value was updated from 3 to 5
+        "birds" => 2          # the key/value pair was added
+      }
+    </pre>
+    <br>
+    <p>Overall, arrays and hashes have many similar attributes and also share some of the same methods. Although they are similar, deciding which one to use is an important step in writing your program.</p>
+    
+  </section>
+</main>
+
+<br><br>
+  <footer>
+      <small>&copy; Copyright 2016 Michael Wang</small>
+  </footer>
+
+</body>
+</html>

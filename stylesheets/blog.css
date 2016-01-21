@@ -38,3 +38,15 @@ p > span {
 	display: block;
 	margin: 10px auto;
 }
+
+pre {
+	width: 75%;
+    margin: 0 auto;
+    background-color: white;
+    padding-top: 15px;
+}
+
+code {
+	background-color: white;
+	font-weight: bold;
+}
