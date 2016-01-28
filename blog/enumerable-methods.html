@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="../stylesheets/default.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+  <title>Michael Wang</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<header>
+      <h1><span>Blog</span> Posts</h1>
+
+      <ul id="navigation">
+        <li><a href="../index.html" class="nav">Home</a></li>
+        <li><a href="../about.html" class="nav">About</a></li>
+        <li><a href="../projects.html" class="nav">Projects</a></li>
+        <li><a href="./index.html" class="nav">Blog</a></li>
+      </ul>
+</header>
+
+<main>
+  <h2>Enumerable Methods: group_by</h2>
+  <h4>January 27, 2016</h4>
+
+  <section>
+    <p>This week, I continued to learn more about Ruby and its many built-in methods. One really interesting and useful method is the <code>Enumerable#group_by</code> method. Basically, this method let's us break a collection into groups based on some given criteria. Let's look at some examples!</p>
+    <pre>
+    group_by { |obj| block }      #=> a_hash
+
+    (1..6).group_by {|i| i%3}     #=> {0=>[3,6], 1=>[1,4], 2=>[2,5]}
+    </pre>
+    <p>The example above shows that the <code>group_by</code> method takes a collection, in this case the numbers <code>1 - 6 inclusive</code>, and passes them through the block <code>i%3</code>. The method then returns a hash where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key. So in the example above, each number 1-6 is modulated by three and then put into a hash. For the key/value pair <code>0=>[3, 6]</code>, <code>3%3 = 0</code> and <code>6%3 = 0</code>.</p>
+    <pre>
+    pets = ["cat", "dog", "bird", "fish", "turtle"]
+
+    pets.group_by { |pet| pet.length }
+
+        #=>{3=>["cat","dog"], 4=>["bird","fish"], 6=>["turtle"]}
+    </pre>
+    <p>In the code above, we created an array <code>pets</code> containing a string of different types of pets. We then pass the <code>pets</code> array into the block specified by <code>group_by</code>, which then groups the array elements by character length. In the resulting hash, the <code>3</code> key contains the elements from <code>pets</code> that are three characters long.</p>
+    <pre>
+    names = ["Mary", "John", "Matt", "Alex", "Jackie"]
+
+    names.group_by { |name| name[0] }
+
+      #=> {"M"=>["Mary","Matt"], "J"=>["John","Jackie"], "A"=>["Alex"]}
+    </pre>
+    <p>In this example, we are grouping names by their first letter. The <code>group_by</code> method takes the <code>names</code> array and returns a hash with the <code>keys</code> as the first letters and the <code>values</code> as the corresponding names starting with that letter.</p>
+    <p>Overall, the <code>group_by</code> method is a handy tool to use when you need to efficiently make a hash based on a specific grouping.</p>
+  </section>
+</main>
+
+<br><br>
+  <footer>
+      <small>&copy; Copyright 2016 Michael Wang</small>
+  </footer>
+
+</body>
+</html>
