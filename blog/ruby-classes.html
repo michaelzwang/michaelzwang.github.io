@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="../stylesheets/default.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+  <title>Michael Wang</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<header>
+      <h1><span>Blog</span> Posts</h1>
+
+      <ul id="navigation">
+        <li><a href="../index.html" class="nav">Home</a></li>
+        <li><a href="../about.html" class="nav">About</a></li>
+        <li><a href="../projects.html" class="nav">Projects</a></li>
+        <li><a href="./index.html" class="nav">Blog</a></li>
+      </ul>
+</header>
+
+<main>
+  <h2>Ruby Classes</h2>
+  <h4>February 3, 2016</h4>
+
+  <section>
+    <p>This week I have been learning a lot about Ruby classes and their uses. In this post, I am going to cover the basics of using classes in Ruby.</p>
+    <p>Basically, classes are descriptions of a category or type of thing. They are used to organize your code and they assign attributes and methods to all objects of the class.</p>
+    <p>Let's look at a simple example where I have created a <code>Greeting</code> class:</p>
+    <pre>
+      class Greeting
+        #methods and variables go here
+      end
+    </pre>
+    <p>Now I am going to add an <code>#initialize</code> method to the class that accepts a <code>name</code> variable. When you create a new instance of the class, the <code>#initialize</code> method is run automatically and will create instance variables, designated by the <code>@variable_name</code> notation. Instance variables are useful because they can be used for every instance of the Greeting class, but will have a unique value each time.</p>
+    <pre>
+      class Greeting
+        def initialize(name)
+          @name = name
+        end
+      end
+    </pre>
+    <p>Now I can add methods to my class. And if I create a new instance <code>michael</code> for the class, I can then call the instance method.</p>
+    <pre>
+      class Greeting
+        def initialize(name)
+          @name = name
+        end
+
+        def english
+          puts "Hello, my name is #{@name}!"
+        end
+      end
+    </pre>
+    <p></p>
+    <pre>
+      michael = Greeting.new("Michael")  #=> this creates a new object
+      michael.english
+                    #=>"Hello, my name is Michael!"
+    </pre>
+    <p>I can continue adding methods and also create new objects of the class!</p>
+    <pre>
+      class Greeting
+        def initialize(name)
+          @name = name
+        end
+
+        def english
+          puts "Hello, my name is #{@name}."
+        end
+
+        def spanish
+          puts "Hola, me llamo #{@name}."
+        end
+
+        def french
+          puts "Bonjour, je m'appelle #{@name}."
+        end
+      end
+    </pre>
+    <p></p>
+    <pre>
+      michael = Greeting.new("Michael")
+      michael.english
+                    #=>"Hello, my name is Michael."
+
+      josh = Greeting.new("Josh")
+      josh.spanish
+                    #=>"Hola, me llamo Josh."
+
+      kelly = Greeting.new("Kelly")
+      kelly.french
+                    #=>"Bonjour, je m'appelle Kelly."
+    </pre>
+    <p>Overall, this was an introduction to the basics of Ruby classes. It is important to remember that nothing will happen with the defined class until a new object is created and a method is called. Additionally, when you use the <code>new</code> keyword, to create an object/instance of the class, the initialize method will be run, usually in order to create instance variables.</p>
+    
+    
+  </section>
+</main>
+
+<br><br>
+  <footer>
+      <small>&copy; Copyright 2016 Michael Wang</small>
+  </footer>
+
+</body>
+</html>
