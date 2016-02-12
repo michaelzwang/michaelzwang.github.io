@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="../stylesheets/default.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+  <title>Michael Wang</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<header>
+      <h1><span>Blog</span> Posts</h1>
+
+      <ul id="navigation">
+        <li><a href="../index.html" class="nav">Home</a></li>
+        <li><a href="../about.html" class="nav">About</a></li>
+        <li><a href="../projects.html" class="nav">Projects</a></li>
+        <li><a href="./index.html" class="nav">Blog</a></li>
+      </ul>
+</header>
+
+<main>
+  <h2>Ruby Hashes vs JavaScript Objects</h2>
+  <h4>February 12, 2016</h4>
+
+  <section>
+    <p>After spending the past few weeks learning Ruby, it was strange to jump into JavaScript. I immediately noticed many similarities, but it was also hard to work through the differences. In this post I will compare and contrast Ruby hashes to JavaScript objects.</p>
+
+    <p>In Ruby, hashes are a way to collect and store information organized in key/value pairs like so:</p>
+    <pre>
+      hash_name = { key1: value1, key2: value2 }
+    </pre>
+    <p>You can then access a key/value pair like this:</p>
+    <pre>
+      hash_name[:key1]          #=> value1
+    </pre>
+
+    <p>In JavaScript however, there is no built-in hash documentation. Rather, you can define an object literal which has similar functionality to a Ruby hash. Instead of a keys, JavaScript has variables called the object properties.</p>
+    <pre>
+      var new_object = { property1: value1, property2: value2 };
+    </pre>
+    <p>You can access the properties like this:</p>
+    <pre>
+      new_object.property1;     //=> value1
+    </pre>
+
+    <p>As you can see, Ruby hashes and JavaScript objects are very similar in appearance and functionality. They are both used to store a collection of data. However, unlike Ruby keys, JavaScript properties must be variables. Additionally, Ruby hashes have built-in methods that do not work in JavaScript.</p>
+
+    <p>The biggest and most important difference in my opinion is that JavaScript objects can take a function as a value.</p>
+
+    <pre>
+      var person = { name: "Michael"};
+
+      person.say_hi = function(){
+        console.log("Hi, my name is " + person.name + "!")
+      };
+
+      person.say_hi()
+
+      //=> "Hi, my name is Michael!"
+    </pre>
+    <p>In the example above, I created a <code>person</code> object with a <code>name</code> property of "Michael". I then create a new property <code>say_hi</code> that is a function. I can then call the function on the object!</p>
+
+  </section>
+</main>
+
+<br><br>
+  <footer>
+      <small>&copy; Copyright 2016 Michael Wang</small>
+  </footer>
+
+</body>
+</html>
