@@ -1,0 +1,26 @@
+
+a.projectlink {
+	color: #000000;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+a.projectlink:hover, a.projectlink.on {
+	color:#3f434a;
+	background-color: #ffffff;
+}
+
+
+#projects {
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	text-align: left;
+}
+
+#project {
+	display: block;
+}
+
