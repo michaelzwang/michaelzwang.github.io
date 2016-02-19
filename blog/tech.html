@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <link href="../stylesheets/default.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+  <title>Michael Wang</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<header>
+      <h1><span>Blog</span> Posts</h1>
+
+      <ul id="navigation">
+        <li><a href="../index.html" class="nav">Home</a></li>
+        <li><a href="../about.html" class="nav">About</a></li>
+        <li><a href="../projects.html" class="nav">Projects</a></li>
+        <li><a href="./index.html" class="nav">Blog</a></li>
+      </ul>
+</header>
+
+<main>
+  <h2>Sorting in Ruby</h2>
+  <h4>February 18, 2016</h4>
+
+  <section>
+    <p>Sorting in Ruby is a useful way to organize your data. Of course, Ruby has its own built-in <code>#sort</code> method, but it is important to understand how it works. Let's take a look at some sorting algorithms!</p>
+
+    <h3>Bubble Sort</h3>
+    <p>The purpose of bubble sort is to go through a list to compare two adjacent elements and arrange them in descending order. You continue this comparison and rearrangement until the entire list is sorted.</p>
+    <pre>
+    def bubble_sort(array)
+        sorted = false
+
+        until sorted
+          sorted = true
+
+          array.each_index do |i|
+            next if i + 1 == array.length
+            j = i + 1
+
+            if array[i] > array[j]
+              sorted = false
+              array[i], array[j] = array[j], array[i]
+            end
+
+          end
+        end
+
+        array
+    end
+    </pre>
+    <p></p>
+    <pre>
+    bubble_sort([5,3,4,7,9,1,2,8,6])
+
+        #=> [1,2,3,4,5,6,7,8,9]
+    </pre>
+
+    <h3>Merge Sort</h3>
+    <p>Merge sort is a divide and conquer sorting algorithm. It first should divide the input list into two sublists until you have "n" lists of one item each. It then will repeatedly merge the two sublists together until you obtain the sorted list.</p>
+    <pre>
+    def mergesort(list)
+        return list if list.size <= 1
+        
+        mid   = list.size / 2
+        left  = list[0, mid]
+        right = list[mid, list.size]
+        
+        merge(mergesort(left), mergesort(right))
+    end
+
+    def merge(left, right)
+        sorted = []
+        
+        until left.empty? || right.empty?
+          
+          if left.first <= right.first
+            sorted << left.shift
+          
+          else
+            sorted << right.shift
+          end
+        
+        end
+  
+        sorted.concat(left).concat(right)
+    end
+    </pre>
+    <p></p>
+    <pre>
+    mergesort([5,3,4,7,9,1,2,8,6])
+
+        #=> [1,2,3,4,5,6,7,8,9]
+    </pre>
+
+    <h3>QuickSort</h3>
+    <p>Quicksort is similar to merge sort. The main differences are that it works in place and the majority of the work happens in the divide step.</p>
+    <pre>
+    def quicksort(array)
+        return array if array.length <= 1
+
+        pivot_index = (array.length / 2).to_i
+        pivot_value = array[pivot_index]
+        array.delete_at(pivot_index)
+
+        lesser = Array.new
+        greater = Array.new
+
+        array.each do |x|
+            if x <= pivot_value
+              lesser << x
+            else
+              greater << x
+            end
+        end
+
+        return quicksort(lesser) + [pivot_value] + quicksort(greater)
+    end
+    </pre>
+    <p></p>
+    <pre>
+    quicksort([5,3,4,7,9,1,2,8,6])
+
+        #=> [1,2,3,4,5,6,7,8,9]
+    </pre>
+
+    <h3>Summary</h3>
+    <p>All three of these sorting methods take in the same input and return the same output. The differences between them results in different memory storage and different run times.</p>
+    
+  </section>
+</main>
+
+<br><br>
+  <footer>
+      <small>&copy; Copyright 2016 Michael Wang</small>
+  </footer>
+
+</body>
+</html>
