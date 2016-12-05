@@ -1,0 +1,221 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+a, a:hover, a:active, a:visited {
+    text-decoration:none!important;
+}
+
+/*header section*/
+nav {
+  text-align: center;
+  background-color: #27AE60;
+  padding: 20px 60px;
+  /*border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;*/
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  border-bottom: 5px solid rgba(77, 86, 86, 0.6);
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+nav ul li {
+  padding:5px 20px;
+}
+nav a, nav a:hover, nav a:visited {
+  color:#F2F4F4!important;
+}
+nav a:hover {
+  border-bottom: 2px solid #F2F4F4;
+  padding-bottom: 3px;
+}
+@media all and (max-width: 800px) {
+  nav ul {
+    justify-content: space-around;
+  }
+}
+@media all and (max-width: 500px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+/*title section*/
+.title {
+  background-color: #3498DB;
+  color:#F2F4F4;
+  text-align: center;
+  height: 88vh;
+  min-height: 400px;
+}
+.title h1 {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 80px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+.title h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+.title h3 {
+  padding-top: 100px;
+    font-family: 'Raleway', sans-serif;
+  /*font-family: 'Pacifico', cursive;*/
+  font-size: 60px;
+  font-weight: 600;
+  /*letter-spacing: 4px;*/
+}
+
+/*about me section*/
+.about-me {
+  background-color: #3498DB;
+  color:#F2F4F4;
+  min-height: 100vh;
+  font-weight: 300;
+  padding: 50px 0;
+}
+.about-me-details {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin: 0 100px;
+  padding-bottom: 20px;
+}
+.about-me-details img {
+  width: 35%;
+  min-width: 150px;
+  height: 35%;
+  min-height: 150px;
+  border-radius: 8px;
+  margin: 0 20px 20px 0;
+}
+.about-me-text {
+  width: 50%;
+}
+.about-me h1 {
+  padding-bottom: 20px;
+  font-weight: 300;
+}
+.about-me-imgs {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0 80px;
+  border-top: 3px solid #F2F4F4;
+  border-bottom: 3px solid #F2F4F4;
+  padding: 20px 0;
+}
+.about-me-imgs div {
+  display: flex;
+  justify-content: center;
+}
+.about-me-imgs img {
+  width: 120px;
+  height: 120px;
+}
+@media all and (max-width: 800px) {
+  .about-me-details {
+    margin: 0 40px;
+  }
+}
+
+/*projects section*/
+.projects {
+  min-height: 100vh;
+  background-color: #E74C3C;
+  padding: 50px 0;
+}
+.projects h1 {
+  text-align: center;
+  color:#F2F4F4;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.all-projects {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.all-projects img {
+  width: 250px;
+  height: auto;
+}
+.all-projects .img {
+  position: relative;
+  float: left;
+  margin: 20px;
+  width: 250px;
+  overflow: hidden;
+}
+#boba {
+  background-color: #F2F4F4;
+}
+#boba img {
+  height: 250px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  transition: all 0.5s;
+  color: #fff;
+  font-weight: 100;
+  text-align: center;
+}
+.overlay h3 {
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-top: 50px;
+}
+.overlay p {
+  font-size: 14px;
+}
+a.expand {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 150px;
+  padding: 5px 0;
+  border: solid 1px #fff;
+  text-align: center;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 1px;
+}
+a.expand:hover {
+  background-color: rgba(242, 244, 244, 0.9);;
+  color: black;
+  font-weight: 300;
+}
+#effect-1 .overlay {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 250px;
+  height: 0;
+}
+#effect-1 .overlay a.expand {
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  margin: 0 auto -70px auto;
+}
+#effect-1 .img.hover .overlay {
+  height: 100%;
+}
