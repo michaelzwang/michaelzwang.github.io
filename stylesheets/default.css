@@ -231,6 +231,7 @@ a.expand:hover {
   text-align: center;
   font-weight: 300;
   color: #F2F4F4;
+  margin-bottom: 50px;
 }
 .contact-icons a {
   color: #F2F4F4;
@@ -243,10 +244,28 @@ a.expand:hover {
 }
 .contact-icons svg {
   width: 30px;
-  fill: #F2F4F4;
+  height: 30px;
+  fill:#F2F4F4;
 }
 .icon-link {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 125px;
   height: 30px;
+  margin: 0 auto 10px auto;
+}
+.linkedin svg {
+  padding: 2px;
+}
+
+
+
+/*footer */
+footer {
+  background-color: #27AE60;
+  color:#F2F4F4;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  padding-bottom: 30px;
 }
