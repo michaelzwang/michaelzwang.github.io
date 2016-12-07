@@ -18,10 +18,13 @@ nav {
   border-bottom: 5px solid rgba(77, 86, 86, 0.6);
 }
 nav ul {
-  display: inline-block;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
@@ -70,11 +73,9 @@ nav a:hover {
 }
 .title h3 {
   padding-top: 100px;
-    font-family: 'Raleway', sans-serif;
-  /*font-family: 'Pacifico', cursive;*/
+  font-family: 'Raleway', sans-serif;
   font-size: 60px;
   font-weight: 600;
-  /*letter-spacing: 4px;*/
 }
 
 /*about me section*/
@@ -86,6 +87,10 @@ nav a:hover {
   padding: 50px 0;
 }
 .about-me-details {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
@@ -108,6 +113,10 @@ nav a:hover {
   font-weight: 300;
 }
 .about-me-imgs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -117,6 +126,10 @@ nav a:hover {
   padding: 20px 0;
 }
 .about-me-imgs div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
 }
@@ -143,6 +156,10 @@ nav a:hover {
   margin-bottom: 30px;
 }
 .all-projects {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -234,8 +251,11 @@ a.expand:hover {
   padding-top: 50px;
 }
 .skills {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  /*justify-content: space-between;*/
   flex-flow: row wrap;
   padding-top: 50px;
   font-weight: 300;
@@ -284,6 +304,10 @@ a.expand:hover {
   fill:#F2F4F4;
 }
 .icon-link {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   width: 125px;

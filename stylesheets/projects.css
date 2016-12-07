@@ -1,0 +1,68 @@
+.project-container {
+  min-height: 100vh;
+}
+.project-header h1 {
+
+}
+.close-project {
+  text-align: right;
+}
+.close-project svg {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top:20px;
+  right: 30px;
+  fill: rgba(0, 0, 0, 0.6);
+}
+.close-project svg:hover {
+  fill: rgba(39,174,96,0.9)
+}
+.project-header h1 {
+  text-align: center;
+}
+.loopi-images {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: 50px auto;
+}
+.loopi-images img {
+  width: 500px;
+  height: 500px;
+  margin: -25px -100px;
+}
+.loopi-images .text {
+  width: 60%;
+  min-width: 20%;
+}
+.loopi-images p span {
+  padding-left: 25px;
+}
+.loopi-images h1 {
+  text-align: center;
+}
+.text {
+  margin: 30px 0;
+}
+.text a {
+  font-weight: 500;
+  color: #FE8C00;
+}
+.text a:hover {
+  color: #27AE60;
+}
+.text h1 {
+  font-weight: 300;
+  font-size: 28px;
+  margin: 15px 0;
+}
+footer {
+  background: white;
+  color: black;
+}
