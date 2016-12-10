@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-  // smooth scrolling from nav
+  // === smooth scrolling from nav ===
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -14,8 +14,7 @@ $( document ).ready(function() {
     }
   });
 
-
-  // projects
+  // === projects ===
   $(".img").mouseenter(function(){
     $(this).addClass("hover");
   })
@@ -38,5 +37,10 @@ $( document ).ready(function() {
           scrollTop : 0                       // Scroll to top of body
       }, 500);
   });
+
+  // === page transition ===
+  setTimeout(function(){
+      $("#pageloader").fadeOut(1000);
+  }, 2000);
 
 });
