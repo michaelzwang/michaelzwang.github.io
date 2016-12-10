@@ -293,7 +293,8 @@ a.expand:hover {
   color: #F2F4F4;
   display: block;
   line-height: 30px;
-  margin-left: 10px;
+  margin-left: 20px;
+  padding-right: 10px;
 }
 .contact-icons a:hover {
   border-bottom: 2px dashed #F2F4F4;
@@ -309,8 +310,9 @@ a.expand:hover {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
-  width: 125px;
+  /*justify-content: space-between;*/
+  text-align: center;
+  width: 135px;
   height: 30px;
   margin: 0 auto 10px auto;
 }
@@ -328,4 +330,30 @@ footer {
   font-size: 12px;
   font-weight: 300;
   padding-bottom: 30px;
+}
+
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    cursor: pointer;
+    -webkit-transition: all 0.6s linear;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+#return-to-top svg {
+    width: 40px;
+    height: 40px;
+    fill: rgba(244, 246, 246, 0.5);
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+#return-to-top svg:hover {
+  fill: rgba(244, 246, 246, 0.9);
 }

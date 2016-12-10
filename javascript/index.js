@@ -14,12 +14,29 @@ $( document ).ready(function() {
     }
   });
 
+
   // projects
   $(".img").mouseenter(function(){
     $(this).addClass("hover");
   })
   .mouseleave(function(){
     $(this).removeClass("hover");
+  });
+
+  // ===== Scroll to Top ====
+  $('#return-to-top').hide();
+
+  $(window).scroll(function() {
+      if ($(this).scrollTop() >= 500) {
+          $('#return-to-top').fadeIn(300);    // Fade in the arrow
+      } else {
+          $('#return-to-top').fadeOut(300);   // Else fade out the arrow
+      }
+  });
+  $('#return-to-top').click(function() {      // When arrow is clicked
+      $('body,html').animate({
+          scrollTop : 0                       // Scroll to top of body
+      }, 500);
   });
 
 });

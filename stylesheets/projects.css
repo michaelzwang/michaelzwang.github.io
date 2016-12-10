@@ -66,3 +66,22 @@ footer {
   background: white;
   color: black;
 }
+footer .social {
+  margin: 15px 0;
+}
+footer .social a {
+  margin: 5px;
+}
+footer .social svg {
+  width: 20px;
+  height: 20px;
+}
+footer .social svg:hover {
+  fill: #27AE60;
+}
+#return-to-top svg {
+  fill: rgba(0, 0, 0, 0.6);
+}
+#return-to-top svg:hover {
+  fill: #27AE60;
+}
