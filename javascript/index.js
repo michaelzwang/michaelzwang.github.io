@@ -38,9 +38,10 @@ $( document ).ready(function() {
       }, 500);
   });
 
-  // === page transition ===
-  setTimeout(function(){
-      $("#pageloader").fadeOut(1000);
-  }, 2000);
 
 });
+
+// === page transition ===
+setTimeout(function(){
+    $("#pageloader").fadeOut(1000);
+}, 2000);
