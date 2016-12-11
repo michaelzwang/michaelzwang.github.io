@@ -43,5 +43,7 @@ $( document ).ready(function() {
 
 // === page transition ===
 setTimeout(function(){
-    $("#pageloader").fadeOut(1000);
-}, 2000);
+    $("#pageloader").fadeOut(500);
+    $('body').hide();
+    $('body').fadeIn(1200);
+}, 2100);
