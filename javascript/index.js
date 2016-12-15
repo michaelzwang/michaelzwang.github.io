@@ -39,6 +39,20 @@ $( document ).ready(function() {
   });
 
 
+  // === Skills Chart ====
+    $('.horizontal .progress-fill span').each(function(){
+      var percent = $(this).html();
+      $(this).parent().css('width', percent);
+    });
+
+    $('.progress-track').mouseenter(function(){
+      $('span.skill-level', this).show();
+    });
+
+    $('.progress-track').mouseleave(function(){
+      $('span.skill-level', this).hide();
+    });
+
 });
 
 // === page transition ===

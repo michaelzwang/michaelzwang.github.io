@@ -217,7 +217,7 @@ a.expand {
   letter-spacing: 1px;
 }
 a.expand:hover {
-  background-color: rgba(242, 244, 244, 0.9);;
+  background-color: rgba(242, 244, 244, 0.9);
   color: black;
   font-weight: 300;
 }
@@ -250,6 +250,83 @@ a.expand:hover {
   font-weight: 300;
   padding-top: 50px;
 }
+
+.graph-container {
+  max-width: 1000px;
+  margin: 30px auto 10px auto;
+  background: #fff;
+  padding: 30px;
+  overflow: hidden;
+  /*float: left;*/
+}
+.graph-container h1 {
+  color: black;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+}
+.bar-container p {
+  padding: 12px 10px 0 10px;
+  line-height: 30px;
+  color: black;
+  width: 150px;
+}
+.horizontal .progress-bar {
+  float: left;
+  height: 45px;
+  width: 85%;
+  padding: 12px 10px;
+}
+
+.horizontal .progress-track {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: #ebebeb;
+}
+
+.progress-track:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.horizontal .progress-fill {
+  position: relative;
+  background: rgba(39, 174, 96, 0.7);
+  height: 30px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato","Verdana",sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+}
+.rounded {
+  border-radius: 15px;
+}
+.rounded .progress-track, .rounded .progress-fill {
+  border-radius: 5px;
+  /*box-shadow: inset 0 0 5px rgba(0,0,0,.2);*/
+}
+
+.progress-fill span {
+  display: none;
+}
+
+.progress-track span {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100px;
+  line-height: 30px;
+}
+
+
 .skills {
   display: -webkit-box;
   display: -moz-box;
@@ -257,7 +334,7 @@ a.expand:hover {
   display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
-  padding-top: 50px;
+  padding-top: 30px;
   font-weight: 300;
   max-width: 850px;
   margin: 0 auto;
