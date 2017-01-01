@@ -2,7 +2,19 @@
   min-height: 100vh;
 }
 .project-header h1 {
-
+}
+.project-header a.link-to {
+  display: block;
+  width: 120px;
+  margin: 20px auto 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  border: 2px solid #FE8C00;
+  border-radius: 20px;
+  color: inherit;
+}
+.project-header a.link-to:hover {
+  border: 2px solid #27AE60;
 }
 .close-project {
   text-align: right;
